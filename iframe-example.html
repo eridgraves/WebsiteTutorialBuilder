@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebsiteTutorialBuilder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div class="splash-screen">
+        <div class="header">
+            <h1 class="title">WebsiteTutorialBuilder</h1>
+            <button class="about-btn">About</button>
+        </div>
+        <div class="splash-content">
+            <h2>Enter a URL to Get Started</h2>
+            <input type="url" id="url-input" placeholder="https://example.com" />
+            <button class="start-btn">Start</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container" style="display: none;">
+        <div class="iframe-container">
+            <iframe src="" title="Embedded Browser"></iframe>
+            <div class="toolbar">
+                <button>Refresh</button>
+                <button>Go Back</button>
+                <button>Go Forward</button>
+            </div>
+        </div>
+        <div class="carousel">
+            <button class="carousel-button left">&lt;</button>
+            <div class="carousel-track">
+                <img src="screenshot1.jpg" alt="Screenshot 1">
+                <img src="screenshot2.jpg" alt="Screenshot 2">
+                <img src="screenshot3.jpg" alt="Screenshot 3">
+            </div>
+            <button class="carousel-button right">&gt;</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
