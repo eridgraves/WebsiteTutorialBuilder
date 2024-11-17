@@ -1,99 +1,143 @@
-/* General Reset */
-body {
+body, html {
     margin: 0;
-    font-family: 'Roboto', Arial, sans-serif;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f5f5f5;
-    height: 100vh;
-    overflow: hidden;
+    flex-direction: column;
 }
 
-/* Splash Screen */
+/* Splash screen styles */
 .splash-screen {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Header */
-.header {
-    position: absolute;
-    top: 20px;
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    margin: 0;
-}
-
-.about-btn {
-    background-color: #007BFF;
-    color: #ffffff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.about-btn:hover {
-    background-color: #0056b3;
-}
-
-/* Splash Content */
-.splash-content {
+    height: 100vh;
+    background: #f0f0f0;
     text-align: center;
 }
 
-.splash-content h2 {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 20px;
+.splash-screen h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #333;
 }
 
-#url-input {
-    width: 300px;
+.splash-screen input {
+    margin-top: 20px;
     padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
+    width: 300px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    margin-bottom: 20px;
 }
 
-.start-btn {
-    background-color: #4CAF50;
-    color: #ffffff;
-    border: none;
+.splash-screen button {
+    margin-top: 10px;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 1rem;
+    color: #fff;
+    background: #007bff;
+    border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
-.start-btn:hover {
-    background-color: #45a049;
+.splash-screen button:hover {
+    background: #0056b3;
 }
 
-/* Hidden Content */
-.container {
-    display: none; /* Initially hidden until user starts */
+/* Main layout styles */
+.main-layout {
+    display: none;
+    height: 100vh;
+    flex-direction: column;
 }
 
-/* Other Styles (Main Content) */
-.iframe-container, .carousel, .toolbar {
-    /* Use existing styles as previously defined */
+/* Top bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+}
+
+.top-bar h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.top-bar button {
+    background: #0056b3;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.top-bar button:hover {
+    background: #003f7f;
+}
+
+/* Content area */
+.content-area {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+}
+
+/* Iframe container */
+iframe {
+    flex-grow: 1;
+    border: none;
+}
+
+/* Right toolbar */
+.toolbar {
+    width: 80px;
+    background: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    border-left: 1px solid #ddd;
+}
+
+.toolbar button {
+    margin: 10px 0;
+    padding: 8px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.toolbar button:hover {
+    background: #0056b3;
+}
+
+/* Screenshot carousel */
+.carousel {
+    height: 100px;
+    background: #f8f9fa;
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.carousel img {
+    height: 80px;
+    margin-right: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.carousel img:last-child {
+    margin-right: 0;
 }

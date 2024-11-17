@@ -2,42 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebsiteTutorialBuilder</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Splash Screen -->
+    <!-- Splash screen -->
     <div class="splash-screen">
-        <div class="header">
-            <h1 class="title">WebsiteTutorialBuilder</h1>
-            <button class="about-btn">About</button>
-        </div>
-        <div class="splash-content">
-            <h2>Enter a URL to Get Started</h2>
-            <input type="url" id="url-input" placeholder="https://example.com" />
-            <button class="start-btn">Start</button>
-        </div>
+        <h1>WebsiteTutorialBuilder</h1>
+        <input id="url-input" type="text" placeholder="Enter a URL (e.g., https://example.com)" />
+        <button id="load-button">Load Website</button>
     </div>
 
-    <!-- Main Content -->
-    <div class="container" style="display: none;">
-        <div class="iframe-container">
-            <iframe src="" title="Embedded Browser"></iframe>
+    <!-- Main layout -->
+    <div class="main-layout">
+        <!-- Top bar -->
+        <div class="top-bar">
+            <h1>WebsiteTutorialBuilder</h1>
+            <button id="about-button">About</button>
+        </div>
+
+        <!-- Content area -->
+        <div class="content-area">
+            <iframe id="website-frame" src=""></iframe>
             <div class="toolbar">
-                <button>Refresh</button>
-                <button>Go Back</button>
-                <button>Go Forward</button>
+                <button>Tool 1</button>
+                <button>Tool 2</button>
+                <button>Tool 3</button>
             </div>
         </div>
+
+        <!-- Screenshot carousel -->
         <div class="carousel">
-            <button class="carousel-button left">&lt;</button>
-            <div class="carousel-track">
-                <img src="screenshot1.jpg" alt="Screenshot 1">
-                <img src="screenshot2.jpg" alt="Screenshot 2">
-                <img src="screenshot3.jpg" alt="Screenshot 3">
-            </div>
-            <button class="carousel-button right">&gt;</button>
+            <img src="https://via.placeholder.com/150" alt="Screenshot 1">
+            <img src="https://via.placeholder.com/150" alt="Screenshot 2">
+            <img src="https://via.placeholder.com/150" alt="Screenshot 3">
         </div>
     </div>
 

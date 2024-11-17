@@ -1,23 +1,23 @@
-// Event listener for Start button
-document.querySelector('.start-btn').addEventListener('click', () => {
-    const urlInput = document.getElementById('url-input').value;
+// Splash screen functionality
+const splashScreen = document.querySelector('.splash-screen');
+const mainLayout = document.querySelector('.main-layout');
+const loadButton = document.getElementById('load-button');
+const urlInput = document.getElementById('url-input');
+const iframe = document.getElementById('website-frame');
 
-    // Validate the URL
-    if (!urlInput || !urlInput.startsWith('http')) {
+loadButton.addEventListener('click', () => {
+    const url = urlInput.value.trim();
+    if (url) {
+        iframe.src = url.startsWith('http') ? url : `https://${url}`;
+        splashScreen.style.display = 'none';
+        mainLayout.style.display = 'flex';
+    } else {
         alert('Please enter a valid URL.');
-        return;
     }
-
-    // Hide the splash screen and show the main content
-    document.querySelector('.splash-screen').style.display = 'none';
-    document.querySelector('.container').style.display = 'block';
-
-    // Set the iframe's src to the entered URL
-    const iframe = document.querySelector('iframe');
-    iframe.src = urlInput;
 });
 
-// Event listener for About button
-document.querySelector('.about-btn').addEventListener('click', () => {
-    alert('WebsiteTutorialBuilder: Build tutorials from any website interactively!');
+// About button functionality
+const aboutButton = document.getElementById('about-button');
+aboutButton.addEventListener('click', () => {
+    alert('WebsiteTutorialBuilder - Embed and explore websites with additional tools!');
 });

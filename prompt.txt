@@ -1,0 +1,6 @@
+o1-preview
+
+How can I make a website component that embeds another browser in a webpage?
+
+Make a splashscreen where the user enters a URL to load in the Iframe. Title the page "WebsiteTutorialBuilder" in the top left and add an about button in the tope right. The iframe should take up the entire page when loaded, except for a toolbar on the right hand side and a screenshot carousel along the bottom.
+
